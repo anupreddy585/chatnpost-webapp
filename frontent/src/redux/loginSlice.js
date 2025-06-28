@@ -6,7 +6,7 @@ export const addUsers = createAsyncThunk(
   'user/addUsers',
   async (userData, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/users", userData);
+      const res = await axios.post("https://chatnpost-bakend.onrender.com/api/users", userData);
       toast.success("User created successfully");
       return res.data;
     } catch (error) {
@@ -20,7 +20,7 @@ export const loginUser = createAsyncThunk(
   'user/loginUser',
   async (userData, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/users/login", userData);
+      const res = await axios.post("https://chatnpost-bakend.onrender.com/api/users/login", userData);
       const user=res.data.user;
       localStorage.setItem("user",JSON.stringify(user));
       toast.success("Login successful");

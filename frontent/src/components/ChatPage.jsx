@@ -13,7 +13,7 @@ export default function ChatPage() {
   useEffect(() => {
     const fetchFriends = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/all/${currentUser._id}`);
+        const res = await axios.get(`https://chatnpost-bakend.onrender.com/api/users/all/${currentUser._id}`);
         setFriends(res.data);
       } catch (err) {
         console.error("Failed to load friends", err);
@@ -22,7 +22,7 @@ export default function ChatPage() {
 
     const fetchUnreadCounts = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/messages/unread/${currentUser._id}`);
+        const res = await axios.get(`https://chatnpost-bakend.onrender.com/api/messages/unread/${currentUser._id}`);
         setUnreadCounts(res.data); 
       } catch (err) {
         console.error("Failed to fetch unread counts", err);

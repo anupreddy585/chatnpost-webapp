@@ -4,7 +4,7 @@ import './ChatRoom.css';
 import axios from "axios";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://chatnpost-bakend.onrender.com");
 
 const ChatRoom = () => {
   const { friendId } = useParams();
@@ -18,7 +18,7 @@ const ChatRoom = () => {
   useEffect(() => {
     const fetchFriend = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/${friendId}`);
+        const res = await axios.get(`https://chatnpost-bakend.onrender.com/api/users/${friendId}`);
         setFriend(res.data);
       } catch (err) {
         console.error("Failed to fetch friend", err);
@@ -32,7 +32,7 @@ const ChatRoom = () => {
     const fetchMessages = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/messages/${currentUser._id}/${friendId}`
+          `https://chatnpost-bakend.onrender.com/api/messages/${currentUser._id}/${friendId}`
         );
         setMessages(res.data);
       } catch (err) {
@@ -69,7 +69,7 @@ const ChatRoom = () => {
     setMessage("");
 
     try {
-      await axios.post("http://localhost:5000/api/messages", newMsg);
+      await axios.post("https://chatnpost-bakend.onrender.com/api/messages", newMsg);
     } catch (err) {
       console.error("Failed to save message", err);
     }

@@ -15,7 +15,7 @@ export default function ImagePostPage() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users");
+      const res = await axios.get("https://chatnpost-bakend.onrender.com/api/users");
       const others = res.data.filter((u) => u._id !== user._id);
       setUsers(others);
     } catch (err) {
@@ -25,7 +25,7 @@ export default function ImagePostPage() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/posts/${user._id}`);
+      const res = await axios.get(`https://chatnpost-bakend.onrender.com/api/posts/${user._id}`);
       setPosts(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       setPosts([]);
@@ -34,7 +34,7 @@ export default function ImagePostPage() {
 
   const fetchUserPosts = async (userId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/posts/${userId}`);
+      const res = await axios.get(`https://chatnpost-bakend.onrender.com/api/posts/${userId}`);
       setSelectedUserPosts(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       setSelectedUserPosts([]);
@@ -51,7 +51,7 @@ export default function ImagePostPage() {
     formData.append("userId", user._id);
 
     try {
-      await axios.post("http://localhost:5000/api/posts", formData, {
+      await axios.post("https://chatnpost-bakend.onrender.com/api/posts", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setImage(null);
@@ -64,7 +64,7 @@ export default function ImagePostPage() {
   const handleDelete = async (postId) => {
     try {
       if (window.confirm("Are you sure you want to delete this post?")) {
-        await axios.delete(`http://localhost:5000/api/posts/${postId}`);
+        await axios.delete(`https://chatnpost-bakend.onrender.com/api/posts/${postId}`);
         fetchPosts();
       }
     } catch (err) {
@@ -122,13 +122,13 @@ export default function ImagePostPage() {
               <div key={post._id} className="post-card">
                 <img
                   className="image"
-                  src={`http://localhost:5000${post.imageUrl}`}
+                  src={`https://chatnpost-bakend.onrender.com${post.imageUrl}`}
                   alt="Post"
-                  onClick={() => setSelectedImage(`http://localhost:5000${post.imageUrl}`)}
+                  onClick={() => setSelectedImage(`https://chatnpost-bakend.onrender.com${post.imageUrl}`)}
                 />
                 <div className="btn-group">
                   <button className="delete-btn" onClick={() => handleDelete(post._id)}>🗑 Delete</button>
-                  <button className="save-btn" onClick={() => handleSave(`http://localhost:5000${post.imageUrl}`)}>💾 Save</button>
+                  <button className="save-btn" onClick={() => handleSave(`https://chatnpost-bakend.onrender.com${post.imageUrl}`)}>💾 Save</button>
                 </div>
               </div>
             ))}
@@ -155,12 +155,12 @@ export default function ImagePostPage() {
                   <div key={post._id} className="post-card">
                     <img
                       className="image"
-                      src={`http://localhost:5000${post.imageUrl}`}
+                      src={`https://chatnpost-bakend.onrender.com${post.imageUrl}`}
                       alt="Post"
-                      onClick={() => setSelectedImage(`http://localhost:5000${post.imageUrl}`)}
+                      onClick={() => setSelectedImage(`https://chatnpost-bakend.onrender.com${post.imageUrl}`)}
                     />
                     <div className="btn-group">
-                      <button className="save-btn" onClick={() => handleSave(`http://localhost:5000${post.imageUrl}`)}>💾 Save</button>
+                      <button className="save-btn" onClick={() => handleSave(`https://chatnpost-bakend.onrender.com${post.imageUrl}`)}>💾 Save</button>
                     </div>
                   </div>
                 ))}
