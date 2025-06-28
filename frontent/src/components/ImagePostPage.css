@@ -1,0 +1,163 @@
+/* Page layout */
+.image-post-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Back Button */
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.back-button:hover {
+  background-color: #4338ca;
+}
+
+/* Upload section */
+.upload-section {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+.upload-section h2 {
+  margin-bottom: 10px;
+}
+.upload-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+.upload-input input[type="file"] {
+  padding: 5px;
+}
+.upload-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.upload-button:hover {
+  background-color: #4338ca;
+}
+
+/* Layout grid */
+.main-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* Sidebar */
+.user-list {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 200px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+.user-list h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #ddd;
+}
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+.user-list li {
+  padding: 8px;
+  border-bottom: 1px solid #333;
+  color: #bbb;
+}
+.user-list li:hover {
+  background-color: #2c2c2c;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Posts section */
+.posts-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.posts-section h3 {
+  margin-bottom: 10px;
+}
+
+/* Post Card */
+.post-card {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+.post-card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Post buttons */
+.post-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.post-buttons button {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+}
+.delete-button:hover {
+  background-color: #dc2626;
+}
+.save-button {
+  background-color: #22c55e;
+  color: white;
+}
+.save-button:hover {
+  background-color: #16a34a;
+}

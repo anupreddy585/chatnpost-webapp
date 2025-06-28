@@ -1,0 +1,130 @@
+
+.container {
+  width: 360px;
+  padding: 3rem 2.5rem;
+  
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  color: white;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  animation: slideUp 0.8s ease forwards;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Heading */
+.heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffffdd;
+}
+
+/* Input Fields */
+.username,
+.password {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.username::placeholder,
+.password::placeholder {
+  color: #ddd;
+}
+
+.username:focus,
+.password:focus {
+  border: 1px solid #8f94fb;
+  outline: none;
+  box-shadow: 0 0 10px #8f94fb88;
+ 
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #a18cd1, #fbc2eb);
+  
+  box-shadow: 0 0 10px #fbc2eb88;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.button:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(251, 194, 235, 0.6);
+}
+
+/* Signup Redirect Text */
+.desc {
+  margin-top: 1.6rem;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.link {
+  color: #fbc2eb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #ffd6f6;
+}
+
+/* Animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}
+/* Avatar Icon */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  animation: fadeIn 1s ease;
+}
+

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.ig-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ig-card {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 12px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.ig-header h2 {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #262626;
+}
+
+.ig-header span {
+  color: #0095f6;
+}
+
+.ig-header p {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dbdbdb;
+}
+
+.ig-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-chat {
+  background-color: #0095f6;
+  color: #fff;
+}
+
+.btn-chat:hover {
+  background-color: #0077c2;
+}
+
+.btn-posts {
+  background-color: #acfe08;
+  color: #000000;
+}
+
+.btn-posts:hover {
+  background-color: #dbdbdb;
+}
+
+.btn-logout {
+  background-color: #ed4956;
+  color: #fff;
+}
+
+.btn-logout:hover {
+  background-color: #c82333;
+}
